@@ -37,6 +37,12 @@ pip install -r requirements.txt
 ```
 
 
+### The Seq2Seq Model
+A Recurrent Neural Network, or RNN, is a network that operates on a sequence and uses its own output as input for subsequent steps.
+A Sequence to Sequence network, or seq2seq network, or Encoder Decoder network, is a model consisting of two RNNs called the encoder and decoder. 
+The encoder reads an input sequence and outputs a single vector, and the decoder reads that vector to produce an output sequence.
+
+
 ### Recommended Readings
 I assume you have at least installed PyTorch, know Python, and understand Tensors:
 - https://pytorch.org/ For installation instructions
