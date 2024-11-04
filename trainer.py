@@ -12,7 +12,7 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer,
 
     total_loss = 0
 
-    total_examples = len(dataloader.dataset)
+    total_examples = len(dataloader)
     example_index = 0
     target_percentage = 0
 
@@ -50,8 +50,8 @@ def train(train_dataloader, encoder, decoder, n_epochs, learning_rate=0.001,
                print_every=100, plot_every=100):
     start = time.time()
     plot_losses = []
-    print_loss_total = 0  # Reset every print_every
-    plot_loss_total = 0  # Reset every plot_every
+    print_loss_total = 0
+    plot_loss_total = 0
 
     encoder_optimizer = optim.Adam(encoder.parameters(), lr=learning_rate)
     decoder_optimizer = optim.Adam(decoder.parameters(), lr=learning_rate)
