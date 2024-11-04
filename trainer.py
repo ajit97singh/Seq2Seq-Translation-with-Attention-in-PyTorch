@@ -11,6 +11,11 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer,
           decoder_optimizer, criterion):
 
     total_loss = 0
+
+    total_examples = len(dataloader.dataset)
+    example_index = 0
+    target_percentage = 0
+
     for data in dataloader:
         input_tensor, target_tensor = data
 
@@ -30,6 +35,12 @@ def train_epoch(dataloader, encoder, decoder, encoder_optimizer,
         decoder_optimizer.step()
 
         total_loss += loss.item()
+
+        if (example_index / total_examples)*100 >= target_percentage:
+            print(f"Current epoch training {target_percentage:.1f} % done")
+            target_percentage += 0.1
+
+        example_index += 1
 
     return total_loss / len(dataloader)
 
