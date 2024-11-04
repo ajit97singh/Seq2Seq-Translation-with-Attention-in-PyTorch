@@ -7,7 +7,7 @@ This question on Open Data Stack Exchange pointed me to the open translation sit
 
 The English to Russian pairs are too big to include in the repository, so download to data/eng-rus.txt before continuing. The file is a tab separated list of translation pairs:
 
-### Note: This is a generic project and can be used to create a translator between any language pair just edit he input_lang variable in main.py
+#### Note: This is a generic project and can be used to create a translator between any language pair by simply editing he input_lang variable in main.py and downloading the corresponding file from above mentioned sources.
 
 ## Project Overview
 
